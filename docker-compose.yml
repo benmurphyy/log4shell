@@ -8,9 +8,6 @@ services:
         source: "./exploit-server"
         target: "/exploit_dir"
   vulnerable-app:
-    build: vulnerable-app
-    network_mode: host
-  test-app:
-    build: test-app
+    build: cve_44228
     network_mode: host
 
