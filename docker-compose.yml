@@ -10,3 +10,7 @@ services:
   vulnerable-app:
     build: vulnerable-app
     network_mode: host
+  test-app:
+    build: test-app
+    network_mode: host
+
