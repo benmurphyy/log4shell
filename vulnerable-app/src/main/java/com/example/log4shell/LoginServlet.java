@@ -7,11 +7,11 @@ import javax.servlet.annotation.*;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.ThreadContext;
 
 
 @WebServlet(name = "loginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -29,7 +29,9 @@ public class LoginServlet extends HttpServlet {
 
             // vulnerable code
             Logger logger = LogManager.getLogger(com.example.log4shell.log4j.class);
-            logger.error(userName);
+            ThreadContext.put("myContext", userName);
+            logger.error("Username set");
+            //logger.error(userName);
 
             out.println("<code> the password you entered was invalid, <u> we will log your information </u> </code>");
         }

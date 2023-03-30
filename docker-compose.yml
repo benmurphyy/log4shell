@@ -7,7 +7,10 @@ services:
       - type: bind
         source: "./exploit-server"
         target: "/exploit_dir"
-  vulnerable-app:
-    build: cve_44228
+  cve-44228:
+    build: vulnerable-app
     network_mode: host
+  cve-45046:
+    build: vulnerable-app
+    network_mode: host 
 
