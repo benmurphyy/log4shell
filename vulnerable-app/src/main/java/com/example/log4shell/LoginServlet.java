@@ -29,6 +29,7 @@ public class LoginServlet extends HttpServlet {
 
             // vulnerable code
             Logger logger = LogManager.getLogger(com.example.log4shell.log4j.class);
+            logger.info("Log4j version: " + org.apache.logging.log4j.util.PropertiesUtil.class.getPackage().getImplementationVersion());
             ThreadContext.put("myContext", userName);
             logger.error("Username set");
             //logger.error(userName);

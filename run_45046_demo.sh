@@ -4,7 +4,7 @@
 # custom signal handler
 function sigint_handler() {
   echo "Stopping docker containers..."
-  docker stop log4shell_vulnerable-app_1
+  docker stop log4shell_cve-45046_1
   docker stop log4shell_exploit-server_1
   echo "Done!"
   exit 1
