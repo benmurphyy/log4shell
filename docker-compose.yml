@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  exploit-server:
+    build: exploit-server
+    network_mode: host
+    volumes:
+      - type: bind
+        source: "./exploit-server"
+        target: "/exploit_dir"
+  base-alpine:
+    build: base-alpine
+    network_mode: host
+  modified-alpine:
+    build: modified-alpine
+    network_mode: host
