@@ -7,22 +7,6 @@ services:
       - type: bind
         source: "./exploit-server"
         target: "/exploit_dir"
-  cve-45046-server:
-    build: cve-45046-server
-    network_mode: host
-    volumes:
-      - type: bind
-        source: "./cve-45046-server"
-        target: "/exploit_dir"
-  base-alpine:
-    build: base-alpine
-    network_mode: host
-  modified-alpine:
-    build: modified-alpine
-    network_mode: host
-  fixed-alpine:
-    build: fixed-alpine
-    network_mode: host
   cve-45046:
     build: cve-45046
     network_mode: host
