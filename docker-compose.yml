@@ -12,5 +12,5 @@ services:
     network_mode: host
   cve-45046:
     build: cve-45046
-    network_mode: host 
+    network_mode: host
 
