@@ -1,18 +1,19 @@
-# CS4239 Group 6 Log4Shell Proof of Concept (PoC)  
+# CS4239 Group 5 Log4Shell Proof of Concepts (PoCs) and patch demos
 
-This project is a is a further develops this PoC: [Github Link](https://github.com/kozmer/log4j-shell-poc)
+This collection of PoCs and patch demos are a based on this PoC: [Github Link](https://github.com/kozmer/log4j-shell-poc)
+
 CVEs covered:
-1. CVE-2021-44228  
+1. CVE-2021-44228
 2. CVE-2021-45046
 
 ## Requirements
 
 Needs a system with x86_64 (AKA amd64) chipset.
 Needs the following software:
-1. Docker  
+1. Docker
 2. docker-compose  
 
-## Instructions to run PoCs and Patched Demos
+## Instructions to run PoCs and patch demos
 
 All PoCs assume a starting directory which is the root of this repository.
 
